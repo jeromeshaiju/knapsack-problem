@@ -8,8 +8,12 @@ import random
 
 ## information about the porogram
 print("This program is a genetic algorithm implementation for the knapsack problem. The goal is to maximize the value of items packed in a backpack without exceeding a weight limit.")
+print()
+print("items and limits are hardcoded for the sake of simplicity but they can be taken as input from the user as well. The items are represented as a list of lists, where each inner list contains the name, weight, and value of an item. The weight limit of the backpack is also defined as a variable.")
 
 
+
+# items and limits are hardcoded for the sake of simplicity but they can be taken as input from the user as well. The items are represented as a list of lists, where each inner list contains the name, weight, and value of an item. The weight limit of the backpack is also defined as a variable.
 
 items=[
     ["computer", 20, 500],
@@ -92,10 +96,8 @@ def creategenome(genome_length)->list[int]:
 def elitism(population,fittness_limit):
     sorted_population=sorted(population,key=lambda genome: partial_fitness_function(genome),reverse=True)
     top_two=[sorted_population[0],sorted_population[1]]
-    print(sorted_population[0],top_two)
     if partial_fitness_function(sorted_population[0])>fittness_limit:
         return sorted_population[0],top_two
-    print([],top_two)
     return [],top_two
 
 
@@ -138,8 +140,8 @@ def run(generational_limit,fittness_limit,probability,population_size):
             
 
 # add inputs for these functions and run the algorithm
-generational_limit=int(input("enter the generational limit"))
-fittness_limit=int(input("enter the fittness limit"))
-probability=float(input("enter the mutation probability"))
-population_size=int(input("enter the population size"))
+generational_limit=int(input("enter the generational limit: "))
+fittness_limit=int(input("enter the fittness limit: "))
+probability=float(input("enter the mutation probability: "))
+population_size=int(input("enter the population size: "))
 run(generational_limit,fittness_limit,probability,population_size)
