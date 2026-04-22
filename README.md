@@ -23,4 +23,4 @@ The Knapsack Problem is a classic optimization puzzle in computer science and ma
 ## 🖥️ Usage
 1. Run the script:
    ```bash
-   python knapsack_ga.py
+   geneticalgo.py
