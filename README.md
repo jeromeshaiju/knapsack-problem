@@ -19,8 +19,3 @@ The Knapsack Problem is a classic optimization puzzle in computer science and ma
 - **Elitism**: Preserves the top 2 best-performing individuals for the next generation to prevent regression.
 
 
-
-## 🖥️ Usage
-1. Run the script:
-   ```bash
-   geneticalgo.py
